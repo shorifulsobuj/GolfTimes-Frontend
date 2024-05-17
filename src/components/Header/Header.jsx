@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 export default function Header() {
   const [isToggleOpen, setIsToggleOpen] = useState(false);
@@ -42,7 +43,7 @@ export default function Header() {
                   fill="rgba(255,255,255,.2)"
                 />
               </svg>
-              Brand
+              GlofTimes
             </a>
             {/*      <!-- Mobile trigger --> */}
             <button
@@ -82,46 +83,65 @@ export default function Header() {
                   : "invisible opacity-0"
               }`}
             >
-              <li role="none" className="flex items-stretch">
-                <a
-                  role="menuitem"
-                  aria-haspopup="false"
-                  className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-indigo-500 focus:text-indigo-600 focus:outline-none focus-visible:outline-none lg:px-8"
-                  href="javascript:void(0)"
-                >
-                  <span>Home</span>
-                </a>
+              <li role="none" className="flex items-stretch mt-5">
+                <NavLink to={"/"}>
+                  <a
+                    role="menuitem"
+                    aria-haspopup="false"
+                    className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-indigo-500 focus:text-indigo-600 focus:outline-none focus-visible:outline-none lg:px-8"
+                  >
+                    <span>Home</span>
+                  </a>
+                </NavLink>
               </li>
-              <li role="none" className="flex items-stretch">
-                <a
-                  role="menuitem"
-                  aria-current="page"
-                  aria-haspopup="false"
-                  className="flex items-center gap-2 py-4 text-indigo-500 transition-colors duration-300 hover:text-indigo-600 focus:text-indigo-600 focus:outline-none focus-visible:outline-none lg:px-8"
-                  href="javascript:void(0)"
-                >
-                  <span>Features</span>
-                </a>
+              <li role="none" className="flex items-stretch mt-5">
+                <NavLink to={"about"}>
+                  <a
+                    role="menuitem"
+                    aria-current="page"
+                    aria-haspopup="false"
+                    className="flex items-center gap-2 py-4 text-indigo-500 transition-colors duration-300 hover:text-indigo-600 focus:text-indigo-600 focus:outline-none focus-visible:outline-none lg:px-8"
+                    href="javascript:void(0)"
+                  >
+                    <span>About</span>
+                  </a>
+                </NavLink>
               </li>
-              <li role="none" className="flex items-stretch">
-                <a
-                  role="menuitem"
-                  aria-haspopup="false"
-                  className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-indigo-500 focus:text-indigo-600 focus:outline-none focus-visible:outline-none lg:px-8"
-                  href="javascript:void(0)"
-                >
-                  <span>Pricing</span>
-                </a>
+              <li role="none" className="flex items-stretch mt-5">
+                <NavLink to={"service"}>
+                  <a
+                    role="menuitem"
+                    aria-haspopup="false"
+                    className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-indigo-500 focus:text-indigo-600 focus:outline-none focus-visible:outline-none lg:px-8"
+                    href="javascript:void(0)"
+                  >
+                    <span>Service</span>
+                  </a>
+                </NavLink>
               </li>
-              <li role="none" className="flex items-stretch">
-                <a
-                  role="menuitem"
-                  aria-haspopup="false"
-                  className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-indigo-500 focus:text-indigo-600 focus:outline-none focus-visible:outline-none lg:px-8"
-                  href="javascript:void(0)"
-                >
-                  <span>About</span>
-                </a>
+              <li role="none" className="flex items-stretch mt-5">
+                <NavLink to={"/blog"}>
+                  <a
+                    role="menuitem"
+                    aria-haspopup="false"
+                    className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-indigo-500 focus:text-indigo-600 focus:outline-none focus-visible:outline-none lg:px-8"
+                    href="javascript:void(0)"
+                  >
+                    <span>Blog</span>
+                  </a>
+                </NavLink>
+              </li>
+              <li role="none" className="flex items-stretch mt-5">
+                <NavLink to={"/contact"}>
+                  <a
+                    role="menuitem"
+                    aria-haspopup="false"
+                    className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-indigo-500 focus:text-indigo-600 focus:outline-none focus-visible:outline-none lg:px-8"
+                    href="javascript:void(0)"
+                  >
+                    <span>Contact</span>
+                  </a>
+                </NavLink>
               </li>
             </ul>
           </nav>
