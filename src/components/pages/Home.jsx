@@ -1,9 +1,15 @@
-import React from "react";
+import About from "../Home/About";
+import BlogSection from "../Home/BlogSection";
+import ContactSection from "../Home/ContactSection";
+import Hero from "../Home/Hero";
 
 export default function Home() {
   return (
     <>
-      <h1>Home</h1>
+      <Hero />
+      <About />
+      <BlogSection />
+      <ContactSection />
     </>
   );
 }
